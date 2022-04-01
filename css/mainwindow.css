@@ -1,0 +1,146 @@
+html,body {
+	height: 100%;
+	width: 100%;
+}
+
+#mainwindow {
+	height: 100%;
+	width: 100%;
+}
+
+#mapcontainer {
+	height: 100%;
+	width: 100%;
+}
+button{
+	border-radius:5px 5px 5px 5px;
+}
+
+.treeLabel{
+	font-size: 1.5625rem;
+	width: 10.625rem;
+	font-weight: bold;
+	background-color: #23ff0b;
+	text-align: left;
+	padding-left: 0.625rem;
+	color: #ff0000;
+	z-index: 11;
+	text-align: center;
+}
+#isshowlayerscontrol{
+	font-size: 1.5625rem;
+	height: 6.25rem;
+	width: 10.625rem;
+	font-weight: bold;
+	background-color: #23ff0b;
+	text-align: left;
+	padding-left: 0.625rem;
+	color: #ff0000;
+	z-index: 11;
+	text-align: center;
+}
+/* #photomapscheckbox:checked ~ .photomaps{
+	 display: none;
+	height: 0px;
+}
+.photomaps{
+	height:6.25rem;
+	display: inline;
+	transition:height  1s;
+}
+ */
+.list{
+	height:3.75rem;
+	width:10.625rem;
+	font-size: 1.5625rem;
+	opacity: 1;
+		border-radius: 5px 5px 5px 5px;
+	background-color: #161fbf;
+}
+.draw-enter-active, .draw-leave-active {
+	transition: all 1s ease;
+}
+.draw-enter-to{
+	height:3.75rem;
+	opacity: 1;
+	font-size: 1.5625rem;
+}
+.draw-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	height: 0.125rem;
+	opacity: 0;
+	font-size: 0rem;
+}
+
+
+#class-list {
+	background: #e2e2e2;
+}
+
+#class-list .class-title {
+	margin: 0;
+	background: #e2f5f9;
+	font-weight: 600;
+}
+
+.class-title {
+	position: relative;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 15px 0 35px;
+	color: #333;
+	background-color: #f2f2f2;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+body,html,div,ul,li,iframe,p,img{
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+/*图层控件的样式设置*/
+.layerControl {
+	margin-right: 0.625rem;
+	position: absolute;
+	bottom: 5px;
+	width: 150px;
+	/* max-height: 120px; */
+	right: 0px;
+	top: 10px;
+	z-index: 2001;
+	color: #FFFFFF;
+	background-color: #7B98BC;
+	border-width: 10px;
+	border-radius: 10px;
+	border-color: #000#000#000#000;
+	opacity:0.8;
+}
+#rightbar{
+	width:18.75rem;
+	background-color: #0000FF;
+}
+.layerControl.title {
+	font-weight: bold;
+	font-size: 15px;
+	margin: 10px;
+}
+
+.layerTree li {
+	list-style: none;
+	margin: 5px 10px;
+}
+
+label {
+	display: block;
+	left: 15px;
+	text-align: center;
+}

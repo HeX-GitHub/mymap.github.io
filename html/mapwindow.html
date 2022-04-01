@@ -5,19 +5,58 @@
 		<title></title>
 		<script src="../libs/OL/build/ol.js"></script>
 		<script src="../libs/supermap-iclient-openlayers-1021-dist/dist/ol/iclient-ol.min.js"></script>
+		<script src="https://unpkg.com/vue@next"></script>
 		<link href="./dist/ol/iclient-ol.css" rel="stylesheet">
-		<link href="./v6.13.0/css/ol.css" rel="stylesheet">
+		<link href="./libs/OL/css/ol.css" />
 		<style>
 			@import url("../css/index.css");
-			@import url("../css/map.css");
+			@import url("../css/mainwindow.css");
 		</style>
 	</head>
 	<body>
-		<div id='headbar'>
-			
-		</div>
 		<div id='mainwindow'>
-			<
+			<div id='mapcontainer'></div>
 		</div>
+		<div id='rightbar'>
+			<div>
+				<button id="isshowlayerscontrol" @click="islayersControlshow = !islayersControlshow">show</button>
+			</div>
+			<button class="treeLabel" @click="photomapsboxshow = !photomapsboxshow">影像底图</button>
+			<transition name=showlayersControl>
+				<div class="layerControl" id="layerControl">
+					
+					<button class="treeLabel" @click="photomapsboxshow = !photomapsboxshow">影像底图</button>
+					<transition name="draw">
+						<div class="list" v-show="photomapsboxshow">
+							<ul id="LTphotomap" class="layerTree"></ul>
+						</div>
+					</transition>
+
+					<button class="treeLabel" @click="vectorsboxshow = !vectorsboxshow">矢量底图</button>
+					<transition name="draw">
+						<div class="list" v-show="vectorsboxshow">
+							<ul id="LTvector" class="layerTree"></ul>
+						</div>
+					</transition>
+
+					<button class="treeLabel" @click="labelsboxshow = !labelsboxshow">标记底图</button>
+					<transition name="draw">
+						<div class="list" v-show="labelsboxshow">
+							<ul id="LTlabel" class="layerTree"></ul>
+						</div>
+					</transition>
+
+					<button class="treeLabel" @click="jsonsboxshow = !jsonsboxshow">JSON图层</button>
+					<transition name="draw">
+						<div class="list" v-show="jsonsboxshow">
+							<ul id="LTjson" class="layerTree"></ul>
+						</div>
+					</transition>
+				</div>
+			</transition>
+		</div>
+
+
+		<script src='../scripts/mainwindow.js'></script>
 	</body>
 </html>
