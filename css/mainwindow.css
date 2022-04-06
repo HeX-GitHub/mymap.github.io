@@ -1,7 +1,7 @@
-html,body {
+/* html,body {
 	height: 100%;
 	width: 100%;
-}
+} */
 
 #mainwindow {
 	height: 100%;
@@ -65,7 +65,7 @@ button{
 	opacity: 1;
 	font-size: 1.5625rem;
 }
-.draw-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.draw-leave-to{
 	height: 0.125rem;
 	opacity: 0;
 	font-size: 0rem;
@@ -101,11 +101,11 @@ body,html,div,ul,li,iframe,p,img{
 	font-family: "微软雅黑";
 }
 
-#map {
+/* #map {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-}
+} */
 
 /*图层控件的样式设置*/
 .layerControl {
@@ -121,7 +121,7 @@ body,html,div,ul,li,iframe,p,img{
 	background-color: #7B98BC;
 	border-width: 10px;
 	border-radius: 10px;
-	border-color: #000#000#000#000;
+	border-color: #000;
 	opacity:0.8;
 }
 #rightbar{
@@ -143,4 +143,53 @@ label {
 	display: block;
 	left: 15px;
 	text-align: center;
+}
+
+.ol-popup {
+	position: absolute;
+	background-color: #fff;
+	-webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid #60cc25;
+	bottom: 12px;
+	left: -50px;
+	min-width: 160px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.ol-popup:after {
+	border-top-color: #fff;
+	border-width: 10px;
+	left: 48px;
+	margin-left: -10px;
+}
+
+.ol-popup:before {
+	border-top-color: #cccccc;
+	border-width: 11px;
+	left: 48px;
+	margin-left: -11px;
+}
+
+.ol-popup-closer {
+	text-decoration: none;
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+
+.ol-popup-closer :after{
+	content: "*";
 }

@@ -25,18 +25,18 @@ html,body{
 	height: 100%;
 	margin:0px;
 }
-.showwindow{
+/* .showwindow{
 	width: 100%;
 	height:88%;
 	/* float: right; */
 	padding: 0.625rem;
 	padding-bottom: 5%;
-}
-#basemap{
+} */
+/* #basemap{
 	height: 100%;
 	width: 100%;
 	float: inherit;
-}
+} */
 .conditionbar{
 	width: 100%;
 	height: 5%;
