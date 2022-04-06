@@ -1,3 +1,6 @@
+
+
+var map;
 var projection = ol.proj.get('EPSG:4326');
 var mapurls = [
 	'http://webst0{1-4}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=6&x={x}&y={y}&z={z}',
@@ -52,7 +55,21 @@ for (i = 0, ii = mapurls.length; i < ii; i++) {
 		})
 	)
 }
-localStorage.setItem('basemaplayers', basemaplayers);
+// localStorage.setItem('basemaplayers', basemaplayers);
+
+
+map = new ol.Map({
+		layers: basemaplayers,
+		//地图容器div的ID
+		target: 'mapcontainer',
+		view: new ol.View({
+			//地图初始中心点
+			center: [12000000, 4000000],
+			minZoom: 2,
+			zoom: 3
+		})
+	});
+
 
 Vue.createApp({
   data() {
@@ -142,7 +159,7 @@ function setInnerText(element, text) {
 ///////////////////////////////////////////////////////////////////////////////
 //绘制对象
 var draw;
-var map;
+
 var source;
 var vector;
 var selectTool, menu_overlay;
@@ -150,17 +167,17 @@ var Modify;
 //var defaultStyle = new ol.style.Style()
 window.onload = function() {
 	//实例化Map对象加载地图,默认底图加载MapQuest地图
-	map = new ol.Map({
-		layers: basemaplayers,
-		//地图容器div的ID
-		target: 'mapcontainer',
-		view: new ol.View({
-			//地图初始中心点
-			center: [12000000, 4000000],
-			minZoom: 2,
-			zoom: 3
-		})
-	});
+	// map = new ol.Map({
+	// 	layers: basemaplayers,
+	// 	//地图容器div的ID
+	// 	target: 'mapcontainer',
+	// 	view: new ol.View({
+	// 		//地图初始中心点
+	// 		center: [12000000, 4000000],
+	// 		minZoom: 2,
+	// 		zoom: 3
+	// 	})
+	// });
 	var select = new ol.interaction.Select();
 	map.addInteraction(select);
 
