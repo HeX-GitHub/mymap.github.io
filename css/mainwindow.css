@@ -20,10 +20,10 @@ button{
 	font-size: 1.5625rem;
 	width: 10.625rem;
 	font-weight: bold;
-	background-color: #23ff0b;
+	background-color: #007e87;
 	text-align: left;
 	padding-left: 0.625rem;
-	color: #ff0000;
+	color: #f5bd14;
 	z-index: 11;
 	text-align: center;
 }
@@ -55,7 +55,7 @@ button{
 	font-size: 1.5625rem;
 	opacity: 1;
 		border-radius: 5px 5px 5px 5px;
-	background-color: #161fbf;
+	background-color: #283260;
 }
 .draw-enter-active, .draw-leave-active {
 	transition: all 1s ease;
@@ -67,8 +67,8 @@ button{
 }
 .draw-leave-to{
 	height: 0.125rem;
-	opacity: 0;
-	font-size: 0rem;
+	opacity: 0.001;
+	font-size: 0.001rem;
 }
 
 
